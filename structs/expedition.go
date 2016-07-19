@@ -29,20 +29,19 @@ type Expedition struct {
 	Prcoeedingreport       string
 }
 
-
 // ExpeditionGeoJSON is a GeoJSON compliant version of this struct.
 // It should be used over the above struct to allow for spatial indexing in
 // MongoDB
 type ExpeditionGeoJSON struct {
-	Uri                    string
-    // Spatial             ExpSpatial       `json:"spatial"`
+	Uri string
+	// Spatial             ExpSpatial       `json:"spatial"`
 	// Type string `json:"type"`
 	// Geo  ExpGeo    `json:"geometry"`
-    // Properties   ExpProperties `json:"properties"`
-    
-    Type string `json:"type"`
-    Coordinates []float64 `json:"coordinates"`
-    Hole                   string
+	// Properties   ExpProperties `json:"properties"`
+
+	Type                   string    `json:"type"`
+	Coordinates            []float64 `json:"coordinates"`
+	Hole                   string
 	Expedition             string
 	Site                   string
 	Program                string
@@ -64,6 +63,7 @@ type ExpeditionGeoJSON struct {
 	Vcdata                 string
 	Note                   string
 	Prcoeedingreport       string
+	Abstract               string
 }
 
 // type ExpSpatial struct {
@@ -81,4 +81,3 @@ type ExpeditionGeoJSON struct {
 // 	// Latitude  string `json:"latitude"`
 // 	// Longitude string `json:"longitude"`
 // }
-
